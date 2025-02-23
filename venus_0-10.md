@@ -54,4 +54,27 @@ Lo que yo hice fue un poco extraño:
 
 angela@venus:~$ cat -n findme.txt | grep -a 4069  >>    Hice que cat me diera las lineas de cada texto ennumeradas, y tomé la 4069 con grep.
 
+Así que simplemente tomamos eso y cambiamos de usuario...
 
+angela@venus:~$ su emma
+
+## 4) Mia
+________________________|
+user: mia               |
+pass: iKXIYg0pyEH2Hos   |
+________________________|
+
+Desde Emma, sabremos al leer el archivo mission.txt que tenemos la contraseña de Mia en el archivo '-'. Pero aparentemente no podemos mover ni renombrar el archivo. El unico lugar donde podemos hacer modificaciones es el directorio '/tmp/'. Así que mandaremos el output de '-' a '/tmp/'
+
+Así que:
+
+emma@venus:~$ cp - /tmp/emmaPass.md   >>    Copiamos el archivo hacia /tmp/ y le ponemos un nombre que podamos ver con alguna aplicacion.
+
+emma@venus:~$ cat /tmp/emmaPass.md  >>  Para leer el contenido del archivo. Que será la contraseña de Mia.
+
+Así que simplemente cambiamos de usuario...
+
+## 5) Camila
+
+user: camila
+pass: 
